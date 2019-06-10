@@ -1,0 +1,21 @@
+{
+  "name": "rockPaperScissors.js",
+  "version": "1.0.0",
+  "description": "The classic game developed in HTML5/CSS3/JS.  \r You can check the game here: [Test Rock-Paper-Scissors.js](https://codepen.io/ZeR0ByTe/full/VOoJGM).",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoyDiego/Rock-Paper-Scissors.js.git"
+  },
+  "keywords": [],
+  "author": "Diego Franchina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoyDiego/Rock-Paper-Scissors.js/issues"
+  },
+  "homepage": "https://github.com/SoyDiego/Rock-Paper-Scissors.js#readme"
+}
