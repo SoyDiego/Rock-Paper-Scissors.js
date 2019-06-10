@@ -39,9 +39,6 @@ function playGame(e) {
 			moveMachine = "Scissors";
 			break;
 	}
-	console.log(`Movimiento usuario: ${moveUser}`);
-	console.log(`Movimiento maquina: ${moveMachine}`);
-	console.log(`-----------------------------------`);
 
 	whoWins(moveUser, moveMachine);
 	return true;
@@ -54,14 +51,16 @@ function whoWins(moveUser, moveMachine) {
 		(moveUser === "Scissors" && moveMachine === "Paper")
 	) {
 		userScore.innerText = Number(userScore.innerText) + 1;
-		results.innerText = `${moveUser} beats ${moveMachine}. You Win :)`;
+		results.innerHTML = `${moveUser} <sup>(You)</sup> beats ${moveMachine} <sup>(Machine)</sup> 
+							<div class="results">You <u>WIN</u> :)</div>`;
 		return true;
 	} else if (
 		(moveUser === "Rock" && moveMachine === "Rock") ||
 		(moveUser === "Paper" && moveMachine === "Paper") ||
 		(moveUser === "Scissors" && moveMachine === "Scissors")
 	) {
-		results.innerText = `Match DRAW. Both chose ${moveUser}`;
+		results.innerHTML = `Match <u>DRAW</u>. 
+							<div class="results">Both chose ${moveUser}</div>`;
 		return true;
 	} else if (
 		(moveUser === "Rock" && moveMachine === "Paper") ||
@@ -69,6 +68,7 @@ function whoWins(moveUser, moveMachine) {
 		(moveUser === "Scissors" && moveMachine === "Rock")
 	)
 		machineScore.innerText = Number(machineScore.innerText) + 1;
-		results.innerText = `${moveMachine} beats ${moveUser}. You lose :(`;
+		results.innerHTML = `${moveMachine} <sup>(Machine)</sup> beats ${moveUser} <sup>(You)</sup>
+							<div class="results">You <u>LOSE</u> :(</div>`;
 		return true;
 }

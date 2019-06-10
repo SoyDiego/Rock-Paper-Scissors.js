@@ -1,19 +1,35 @@
-@media (min-width: 1200px) {
+/*==========  Non-Mobile First // Responsive Web Design ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+	.results {
+		font-size: 24px;
+	}
 }
 
-@media (max-width: 992px) {
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+	.score {
+		width: 25%;
+	}
+
+	.results {
+		font-size: 24px;
+	}
 }
 
-/* Tablets (landscape) */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+	.score {
+		width: 30%;
+	}
+	.results {
+		font-size: 21px;
+	}
 }
 
-/* Tablets (portrait) */
-@media (max-width: 768px) {
-}
-
-/* Smartphones (portrait) */
-@media (max-width: 480px) {
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
 	.title-game {
 		font-size: 20px;
 	}
@@ -23,18 +39,38 @@
 	}
 
 	.score {
-		width: 40%;
+		width: 70%;
 	}
 
 	.icon-rock,
 	.icon-paper,
 	.icon-scissors {
 		padding: 15px;
-		margin: 10px 40px;
-    }
-    
-    .results{
-        font-size: 25px;
-        text-align: center;
-    }
+		margin: 10px 20px;
+	}
+
+	.results {
+		font-size: 18px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+	sup {
+		font-size: 10px;
+	}
+	.score {
+		width: 60%;
+	}
+
+	.icon-rock,
+	.icon-paper,
+	.icon-scissors {
+		padding: 10px;
+		margin: 10px 20px;
+	}
+
+	.results {
+		font-size: 15px;
+	}
 }
